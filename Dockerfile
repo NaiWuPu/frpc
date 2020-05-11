@@ -10,6 +10,6 @@ WORKDIR $GOPATH/src/frpc_wxy/cmd/frps
 
 ADD . $GOPATH/src/frpc_wxy
 
-RUN go build -o frps -c frps.ini
+RUN go build -o frps
 
-ENTRYPOINT  ["./frps"]
+ENTRYPOINT  ["./frps","-c","../../conf/frps.ini"]
